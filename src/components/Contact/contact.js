@@ -34,10 +34,11 @@ const Contact = () => {
           <button  type='submit' value='send'
           className="submitBtn">Submit</button>
           <div className="links">
-            <img src={FacebookIcon} alt="Facebook" className="link" />
-            <img src={TwitterIcon} alt="Twitter" className="link" />
-            <img src={YoutubeIcon} alt="Youtube" className="link" />
-            <img src={InstagramIcon} alt="Instagram" className="link" />
+            <img src={FacebookIcon} alt="Facebook" className="link" onClick={() => window.open('https://www.facebook.com/saumyaneupane')} />
+            <img src={TwitterIcon} alt="Twitter" className="link" onClick={() => window.open('https://www.twitter.com/saumya_neupane')} />
+            <img src={YoutubeIcon} alt="Youtube" className="link" onClick={() => window.open('https://www.youtube.com/saumyaneupane')} />
+            <img src={InstagramIcon} alt="Instagram" className="link" onClick={() => window.open('https://www.instagram.com/saumyaneupane')} />
+
           </div>
 
         </form>
