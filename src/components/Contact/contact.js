@@ -6,7 +6,7 @@ import Microsoft from '../../assets/microsoft.png'
 import Facebook from '../../assets/facebook.png'
 import FacebookIcon from '../../assets/facebook-icon.png'
 import TwitterIcon from '../../assets/twitter.png'
-import YoutubeIcon from '../../assets/youtube.png'
+import LinkedInIcon from '../../assets/linkedin.png'
 import InstagramIcon from '../../assets/instagram.png'
 import emailjs from '@emailjs/browser';
 
@@ -55,7 +55,7 @@ const Contact = () => {
           <div className="links">
             <img src={FacebookIcon} alt="Facebook" className="link" onClick={() => window.open('https://www.facebook.com/saumyaneupane')} />
             <img src={TwitterIcon} alt="Twitter" className="link" onClick={() => window.open('https://www.twitter.com/saumya_neupane')} />
-            <img src={YoutubeIcon} alt="Youtube" className="link" onClick={() => window.open('https://www.youtube.com/saumyaneupane')} />
+            <img src={LinkedInIcon} alt="Youtube" className="link" onClick={() => window.open('https://www.linkedin.com/in/saumyaneupane')} />
             <img src={InstagramIcon} alt="Instagram" className="link" onClick={() => window.open('https://www.instagram.com/saumyaneupane')} />
 
           </div>
