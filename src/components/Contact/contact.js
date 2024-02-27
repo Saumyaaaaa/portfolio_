@@ -8,7 +8,7 @@ import Facebook from '../../assets/facebook.png'
 const Contact = () => {
   return (
     <div>
-      <section className="contactPage">
+      <section id="contactPage">
         <div id="clients">
             <h1 className="contactPageTitle">My Clients</h1>
             <p className="clientDesc">
