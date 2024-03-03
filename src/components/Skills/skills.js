@@ -15,7 +15,7 @@ const Skills = () => {
           <img src={UIDesign} alt="UIDesign" className="skillBarImg" />
           <div className="skillBarText">
             <h2>UI/UX Design </h2>
-            <p>This is a demo tesxt. Lorem, ipsum.</p>
+            <p>As a UI/UX designer, I specialize in creating engaging and user-friendly digital interfaces, blending creativity with functionality to deliver exceptional user experiences.</p>
           </div>
 
         </div>
@@ -23,7 +23,7 @@ const Skills = () => {
           <img src={WebDesign} alt="WebDesign" className="skillBarImg" />
           <div className="skillBarText">
             <h2>Website Design</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p>As a website designer, I specialize in crafting visually appealing and user-friendly websites that effectively communicate brand identity and engage visitors.</p>
           </div>
 
         </div>
@@ -31,7 +31,9 @@ const Skills = () => {
           <img src={AppDesign} alt="AppDesign" className="skillBarImg" />
           <div className="skillBarText">
             <h2>App Design</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>As a designer, I create captivating and user-friendly apps that seamlessly blend aesthetics with functionality to enhance user experiences on various platforms.
+
+</p>
           </div>
 
         </div>
