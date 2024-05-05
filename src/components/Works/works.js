@@ -14,7 +14,8 @@ const Works = () => {
         <h2 className="worksTitle">My Portfolio</h2>
         <span className="worksDesc">I am excited to bring my skills and experience to help business achieve their goals and create a strong online presence.</span>
         <div className="worksImgs">
-            <img src={Portfolio1} alt=""className="worksImg" />
+           
+            <img src={Portfolio1} alt=""className="worksImg"/> 
             <img src={Portfolio2} alt=""className="worksImg"/> 
             <img src={Portfolio3} alt=""className="worksImg" />
             <img src={Portfolio4} alt=""className="worksImg"/> 
