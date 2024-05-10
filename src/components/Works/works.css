@@ -1,53 +1,59 @@
-#works{
-    margin: 0 auto;
-    min-height: calc(100vh-4rem);
-    width: 100vw;
-    max-width: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-}
-.worksTitle{
-    margin: 1rem 0;
-    font-size: 3rem;
-
-}
-.workDesc{
-    font-weight: 300;
-    font-size: 1rem;
-    max-width: 45rem;
+#works {
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
 }
 
-.worksImgs{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
-    max-width: 65rem;
-
-}
-.worksImg{
-    object-fit: cover;
-    height: 20rem;
-    margin: 0.5rem;
-
-}
-.worksBtn{
-    padding:0.5rem 2.5rem ;
-    border: none;
-    background: white;
-    border-radius: 2rem;
-    font-size: 1rem;
-    margin: 3rem 0;
+.worksTitle {
+  margin: 1rem 0;
+  font-size: 3rem;
 }
 
-@media screen and (max-width:585px) {
-    .worksImg{
-        height: 48vw;
-    }
-    
+.worksDesc {
+  font-weight: 300;
+  font-size: 1rem;
+  max-width: 45rem;
+}
+
+.worksCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardLink {
+  text-decoration: none;
+}
+
+.card {
+  margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardImg {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.card:hover .cardImg {
+  transform: scale(1.05);
+}
+
+.worksBtn {
+  padding: 0.5rem 2.5rem;
+  border: none;
+  background: white;
+  border-radius: 2rem;
+  font-size: 1rem;
+  margin: 3rem 0;
 }
