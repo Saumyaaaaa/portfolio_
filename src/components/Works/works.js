@@ -1,31 +1,62 @@
-import React from 'react'
-import './works.css'
-import Portfolio1 from '../../assets/portfolio-1.png'
-import Portfolio2 from '../../assets/portfolio-2.png'
-import Portfolio3 from '../../assets/portfolio-3.png'
-import Portfolio4 from '../../assets/portfolio-4.png'
-import Portfolio5 from '../../assets/portfolio-5.png'
-import Portfolio6 from '../../assets/portfolio-6.png'
+import React from "react";
+import "./works.css";
+
+import ngo from "../../assets/ngo.jpg";
+import yotubeClone from "../../assets/yotubeClone.jpg";
+import recipe from "../../assets/recipe.jpg";
+import grocery from "../../assets/grocery.jpg";
+
+const projectData = [
+  { image: ngo, alt: "ngo website", link: "https://hiuchulinepal.vercel.app" },
+  {
+    image: yotubeClone,
+    alt: "youtube",
+    link: "https://youtube-clone-phi-fawn.vercel.app",
+  },
+  {
+    image: recipe,
+    alt: "recipe app",
+    link: "https://my-recipe-dusky.vercel.app",
+  },
+  {
+    image: grocery,
+    alt: "grocery",
+    link: "https://saumyaaaaa.github.io/grocery/",
+  },
+
+];
 
 const Works = () => {
   return (
     <div>
       <section id="works">
-        <h2 className="worksTitle">My Portfolio</h2>
-        <span className="worksDesc">I am excited to bring my skills and experience to help business achieve their goals and create a strong online presence.</span>
-        <div className="worksImgs">
-           
-            <img src={Portfolio1} alt=""className="worksImg"/> 
-            <img src={Portfolio2} alt=""className="worksImg"/> 
-            <img src={Portfolio3} alt=""className="worksImg" />
-            <img src={Portfolio4} alt=""className="worksImg"/> 
-            <img src={Portfolio5} alt=""className="worksImg" />
-            <img src={Portfolio6} alt=""className="worksImg" />
+        <h2 className="worksTitle">My Projects</h2>
+        <span className="worksDesc">
+          I am excited to share  my projects  during my learning session.
+        </span>
+        <div className="worksCards">
+          {projectData.map((project, index) => (
+            <a
+              key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cardLink"
+            >
+              <div className="card">
+                <img
+                  src={project.image}
+                  alt={project.alt}
+                  className="cardImg"
+                />
+              </div>
+            </a>
+          ))}
         </div>
         <button className="worksBtn">See More</button>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;

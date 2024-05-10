@@ -32,9 +32,9 @@ const Contact = () => {
     <div>
       <section id="contactPage">
         <div id="clients">
-            <h1 className="contactPageTitle">My Clients</h1>
+            <h1 className="contactPageTitle">Technologies</h1>
             <p className="clientDesc">
-                I am a member of the following  clients and have worked with them on various projects. If you would like to get in touch, feel free toHere are some of the clients I have had here.
+               Technologies I have been working with.
             </p>
             <div className="clientImgs">
                 <img src= {Walmart} alt="Client" className="clientImg" />
