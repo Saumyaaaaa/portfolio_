@@ -1,9 +1,13 @@
 import React, { useRef } from 'react'
 import './contact.css'
-import Walmart from '../../assets/walmart.png'
-import Adobe from '../../assets/adobe.png'
-import Microsoft from '../../assets/microsoft.png'
-import Facebook from '../../assets/facebook.png'
+import Reacts from '../../assets/react.png'
+import JS from '../../assets/js.png'
+import Type from '../../assets/typescript.png'
+import Git from '../../assets/git.png'
+import Node from '../../assets/node.png'
+import Post from '../../assets/postmann.png'
+import Docker from '../../assets/docker.png'
+import Next from '../../assets/next.png'
 import FacebookIcon from '../../assets/facebook-icon.png'
 import TwitterIcon from '../../assets/twitter.png'
 import LinkedInIcon from '../../assets/linkedin.png'
@@ -37,10 +41,14 @@ const Contact = () => {
                Technologies I have been working with.
             </p>
             <div className="clientImgs">
-                <img src= {Walmart} alt="Client" className="clientImg" />
-                <img src= {Adobe} alt="Client" className="clientImg" />
-                <img src= {Microsoft} alt="Client" className="clientImg" />
-                <img src= {Facebook} alt="Client" className="clientImg" />
+                <img src= {Reacts} alt="Client" className="clientImg" />
+                <img src= {JS} alt="Client" className="clientImg" />
+                <img src= {Type} alt="Client" className="clientImg" />
+                <img src= {Git} alt="Client" className="clientImg" />
+                <img src= {Node} alt="Client" className="clientImg" />
+                <img src= {Post} alt="Client" className="clientImg" />
+                <img src= {Docker} alt="Client" className="clientImg" />
+                <img src= {Next} alt="Client" className="clientImg" />
             </div>
         </div>
         <div className="contact" id="contact"></div>
