@@ -71,7 +71,7 @@ const Navbar = () => {
       <button
         className="desktopMenuBtn"
         onClick={() => {
-          document.getElementById("contact").scrollIntoView({
+          document.getElementById("contactPage").scrollIntoView({
             behavior: "smooth",
           });
         }}
@@ -137,7 +137,7 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
-          to="contact"
+          to="contactPage"
           spy={true}
           smooth={true}
           offset={-100}
