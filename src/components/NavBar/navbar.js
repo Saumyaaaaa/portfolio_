@@ -1,15 +1,26 @@
-import React, { useState } from 'react'
-import './navbar.css'
-import logo from '../../assets/logo.png'
-import {Link} from 'react-scroll'
-import contactImg from '../../assets/contact.png'
-import menu from '../../assets/menu.png'
+import React, { useState } from "react";
+import "./navbar.css";
+import logo from "../../assets/logo.png";
+import { Link } from "react-scroll";
+import contactImg from "../../assets/contact.png";
+import menu from "../../assets/menu.png";
 
 const Navbar = () => {
-  const [showMenu,setShowMenu]=useState(false)
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <nav className="navbar">
-      <img src={logo} alt="Logo" className="logo" />
+      <Link
+        to="intro"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}
+        className="logoLink"
+      >
+        <img src={logo} alt="Logo" className="logo" />
+      </Link>
+
       <div className="desktopMenu">
         <Link
           activeClass="active"
@@ -56,6 +67,7 @@ const Navbar = () => {
           Portfolio
         </Link>
       </div>
+
       <button
         className="desktopMenuBtn"
         onClick={() => {
@@ -138,6 +150,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
