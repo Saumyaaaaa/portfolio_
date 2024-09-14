@@ -10,9 +10,12 @@
 }
 
 .contactPageTitle {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
 }
+
 
 .clientDesc {
     font-weight: 300;
