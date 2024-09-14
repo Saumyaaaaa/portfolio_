@@ -19,23 +19,48 @@
     font-size: 1rem;
 }
 
+/* Container Styles */
 .clientImgs {
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center align icons horizontally */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* Necessary for absolute positioning of the wrapper */
+    width: 100%; /* Full width of the container */
 }
 
+/* Marquee Wrapper */
+.clientImgWrapper {
+    display: flex; /* Flexbox ensures images line up horizontally */
+    width: 200%; /* Set width to twice the container width */
+    animation: marquee 20s linear infinite; /* Adjust timing for smoother scrolling */
+}
+
+/* Image Styles */
 .clientImg {
     object-fit: cover;
-    width: 15%; /* Adjust width for smaller screens */
-    min-width: 6rem; /* Adjust min-width */
+    width: 10%; /* Adjust width to make images smaller */
+    min-width: 5rem; /* Ensure images are not too small */
     padding: 0.25rem;
+    margin-right: 1rem; /* Add space between images */
+    flex-shrink: 0; /* Prevent images from shrinking */
 }
 
-#clients {
-    padding: 2rem;
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .clientImg {
+        width: 15%; /* Increase width for mobile */
+        min-width: 4rem; /* Decrease min-width */
+    }
 }
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 
 .contactPageDesc {
     padding: 1rem;
@@ -88,13 +113,9 @@
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
-    .clientImg {
-        width: 20%; /* Increase width to fit more icons per row */
-        min-width: 5rem; /* Decrease min-width */
-    }
-
     .link {
         height: 2rem; /* Smaller social icons on mobile */
         width: 2rem; /* Smaller social icons on mobile */
     }
+   
 }
