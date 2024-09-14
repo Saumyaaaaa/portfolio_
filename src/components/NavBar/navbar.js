@@ -64,7 +64,7 @@ const Navbar = () => {
           duration={500}
           className="desktopMenuListItem"
         >
-          Portfolio
+          Projects
         </Link>
       </div>
 
@@ -133,7 +133,7 @@ const Navbar = () => {
           className="ListItem"
           onClick={() => setShowMenu(false)}
         >
-          Portfolio
+          Projects
         </Link>
         <Link
           activeClass="active"
