@@ -18,6 +18,13 @@
     object-fit: cover;
     height: 3rem;
     width: 4rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); 
+    opacity: 0.8; 
 }
 
 .desktopMenuListItem{
