@@ -14,11 +14,15 @@ import Css from "../../assets/css-3.png";
 import C from "../../assets/c-.png";
 import Python from "../../assets/python.png";
 import Java from "../../assets/java.png";
-import FacebookIcon from "../../assets/facebook-icon.png";
 import TwitterIcon from "../../assets/twitter.png";
 import LinkedInIcon from "../../assets/linkedin.png";
 import InstagramIcon from "../../assets/instagram.png";
+import { FaGithub } from "react-icons/fa"; // Importing FaGithub icon
 import emailjs from "@emailjs/browser";
+import { Link } from "react-scroll"; // Import Link for smooth navigation
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Contact = () => {
   const form = useRef();
@@ -28,14 +32,23 @@ const Contact = () => {
 
     emailjs
       .sendForm("service_ki22thf", "template_p98k0xi", form.current, {
-        publicKey: "71syBSKXNjnyjXW2E9yVL",
+        publicKey: "WhQ9gVqHJML5V_qeD",
       })
       .then(
-        () => {
-          console.log("SUCCESS!");
+        (result) => {
+          toast.success("Message sent successfully!", {
+            position: "top-right",
+            autoClose: 3000, // 3 seconds
+          });
+          console.log("Email sent successfully:", result);
+          e.target.reset();
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          toast.error("Failed to send message. Please try again.", {
+            position: "top-right",
+            autoClose: 3000, // 3 seconds
+          });
+          console.error("FAILED...", error.text);
         }
       );
   };
@@ -108,18 +121,16 @@ const Contact = () => {
             Submit
           </button>
           <div className="links">
-            <img
-              src={FacebookIcon}
-              alt="Facebook"
+            <FaGithub
               className="link"
-              onClick={() =>
-                window.open("https://www.facebook.com/saumyaneupane")
-              }
+              style={{ cursor: "pointer" }}
+              onClick={() => window.open("https://github.com/Saumyaaaaa")}
             />
             <img
               src={TwitterIcon}
               alt="Twitter"
               className="link"
+              style={{ cursor: "pointer" }}
               onClick={() =>
                 window.open("https://www.twitter.com/saumya_neupane")
               }
@@ -128,6 +139,7 @@ const Contact = () => {
               src={LinkedInIcon}
               alt="LinkedIn"
               className="link"
+              style={{ cursor: "pointer" }}
               onClick={() =>
                 window.open("https://www.linkedin.com/in/saumyaneupane")
               }
@@ -136,12 +148,26 @@ const Contact = () => {
               src={InstagramIcon}
               alt="Instagram"
               className="link"
+              style={{ cursor: "pointer" }}
               onClick={() =>
                 window.open("https://www.instagram.com/saumya_neupane/")
               }
             />
           </div>
         </form>
+
+        {/* Toast container to display success or error messages */}
+        <ToastContainer />
+
+        {/* Use Link to scroll back to the home section after form submission */}
+        <Link
+          to="intro" // ID of the home section
+          smooth={true}
+          duration={500}
+          className="backToHome"
+        >
+          Back to Home
+        </Link>
       </section>
     </div>
   );
