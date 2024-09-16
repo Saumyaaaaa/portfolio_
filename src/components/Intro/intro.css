@@ -1,117 +1,127 @@
 #intro {
-    height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 75rem;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    object-fit: cover;
-    height: 100vh;
-    width: 50%;
-    clip-path: circle(70% at 70% 50%);
-    animation: morph 8s ease-in-out infinite;
-    transition: all 1s ease-in-out;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes morph {
-    0% {
-        clip-path: circle(70% at 70% 50%);
-    }
-    50% {
-        clip-path: circle(65% at 75% 45%);
-    }
-    100% {
-        clip-path: circle(70% at 70% 50%);
-    }
+  height: calc(100vh - 4rem);
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .introContent {
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 50%;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.bgWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  clip-path: circle(70% at 70% 50%);
+  animation: morph 8s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  filter: grayscale(100%); /* Black and white filter */
+}
+.bg:hover {
+  filter: grayscale(0%); /* Revert to original color on hover */
+}
+
+@keyframes morph {
+  0% {
+    clip-path: circle(70% at 70% 50%);
+  }
+  50% {
+    clip-path: circle(65% at 75% 45%);
+  }
+  100% {
+    clip-path: circle(70% at 70% 50%);
+  }
 }
 
 .hello {
-    font-size: 1.75rem;
-    font-weight: 100;
+  font-size: 1.75rem;
+  font-weight: 100;
 }
 
 .introName {
-    color: yellow;
+  color: yellow;
 }
 
 .introPara {
-    font-size: medium;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-.btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.btnImg {
-    object-fit: cover;
-    margin: 0 0.25rem;
-    height: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 840px) {
-    .bg {
-        width: 85%; /* Increase size further for larger mobile screens */
-        height: auto; /* Maintain aspect ratio */
-        right: 0; /* Center the image */
-    }
-    .introContent {
-        font-size: 2.5rem;
-    }
-    .hello {
-        font-size: 1.5rem;
-    }
+  #intro {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .introContent {
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    order: 2;
+  }
+
+  .bgWrapper {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    order: 1;
+  }
+
+  .bg {
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  .hello {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .bg {
-        width: 80%; /* Increase size further for smaller screens */
-        height: auto; /* Maintain aspect ratio */
-        right: 0; /* Center the image */
-        opacity: 0.9; /* Optional: adjust opacity */
-        object-fit: contain; /* Ensure the full image is displayed */
-    }
-    .introContent {
-        font-size: 2rem;
-        padding: 1rem;
-    }
-    .hello {
-        font-size: 1.25rem;
-    }
-    .introPara {
-        font-size: 0.9rem;
-    }
+  .introContent {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .hello {
+    font-size: 1.25rem;
+  }
+
+  .introPara {
+    font-size: 0.9rem;
+  }
+
+  .bgWrapper {
+    height: 40vh;
+  }
+
+  .bg {
+    opacity: 0.9;
+  }
 }
-
-
