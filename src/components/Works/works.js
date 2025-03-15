@@ -7,7 +7,11 @@ import recipe from "../../assets/recipe.jpg";
 import grocery from "../../assets/grocery.jpg";
 
 const projectData = [
-  { image: ngo, alt: "NGO Website", link: "https://hiuchulinepal.vercel.app" },
+  {
+    image: ngo,
+    alt: "NGO Website",
+    link: "https://ecohimalayahub.vercel.app/",
+  },
   {
     image: yotubeClone,
     alt: "YouTube Clone",
